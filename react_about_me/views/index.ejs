@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <title><%= title %></title>
     <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
+    <div class="container">
+      <h1><%= title %></h1>
+      <div id="app-container"></div>
+    </div>
     <script src="/javascripts/bundle.js"></script>
   </body>
 </html>
