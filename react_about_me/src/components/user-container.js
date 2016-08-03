@@ -1,4 +1,5 @@
 import React from 'react';
+import UserForm from './user-form';
 
 class UserContainer extends React.Component {
   constructor(){
@@ -23,6 +24,7 @@ class UserContainer extends React.Component {
     return (
       <div>
         <UserForm addUser={ this._addUser.bind(this) } />
+
       </div>
     )
   }
