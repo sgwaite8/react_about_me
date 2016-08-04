@@ -9,7 +9,7 @@ class UserForm extends React.Component {
     $.ajax({
       url: 'users',
       method: 'POST',
-      data: {text: newUser},
+      data: {name: newUserName, url: newUserUrl, text: newUserText},
       dataType: 'json'
     }) .done(function(data){
       this.props.addUser(data);
