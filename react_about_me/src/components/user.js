@@ -23,7 +23,7 @@ class User extends React.Component {
       return (
     <div>
       <h3>{this.props.name}</h3>
-      <h3>{this.props.url}</h3>
+      <img src={this.props.url}/>
       <h3>{this.props.text}</h3>
       <i onClick={ this._handleClick.bind(this) } className="fa fa-trash" aria-hidden="true"></i>
     </div>);
