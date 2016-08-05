@@ -21,9 +21,9 @@ class UserForm extends React.Component {
   render(){
     return (
       <form onSubmit={ this._handleSubmit.bind(this) }>
-        <input ref="newUserName" type="text" />
-        <input ref="newUserUrl" type="text" />
-        <input ref="newUserText" type="text" />
+        <input ref="newUserName" type="text" placeholder="Name" />
+        <input ref="newUserUrl" type="text" placeholder="Image Url" />
+        <input ref="newUserText" type="text" placeholder="About Me" />
         <input type="submit" value="Add New User" />
       </form>
     )

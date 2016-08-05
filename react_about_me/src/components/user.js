@@ -6,7 +6,7 @@ class User extends React.Component {
     this.state = {display: true};
   }
   _handleClick(){
-    var confirmed = confirm("Are you sure?");
+    var confirmed = confirm("Are you sure you want to delete this user?");
     if (confirmed){
       $.ajax({
         method: 'DELETE',
@@ -24,8 +24,8 @@ class User extends React.Component {
     <div>
       <h3>{this.props.name}</h3>
       <img src={this.props.url}/>
-      <h3>{this.props.text}</h3>
-      <i onClick={ this._handleClick.bind(this) } className="fa fa-trash" aria-hidden="true"></i>
+      <p>{this.props.text}</p>
+      <i onClick={ this._handleClick.bind(this) } className="fa fa-trash fa-2x" aria-hidden="true"></i>
     </div>);
     } else {
       return false;

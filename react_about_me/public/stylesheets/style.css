@@ -1,8 +1,41 @@
+/*font-family: 'Raleway', sans-serif;*/
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 75px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 80px;
+  margin-top: -20px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  color: black;
 }
