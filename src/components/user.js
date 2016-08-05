@@ -21,10 +21,10 @@ class User extends React.Component {
   render(){
     if (this.state.display) {
       return (
-    <div>
+    <div  >
       <h3>{this.props.name}</h3>
-      <img src={this.props.url}/>
-      <p>{this.props.text}</p>
+      <img  src={this.props.url}/>
+      <p >{this.props.text}</p>
       <i onClick={ this._handleClick.bind(this) } className="fa fa-trash fa-2x" aria-hidden="true"></i>
     </div>);
     } else {

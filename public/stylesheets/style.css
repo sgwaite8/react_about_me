@@ -1,4 +1,7 @@
 /*font-family: 'Raleway', sans-serif;*/
+/* gray #2D2D2D*/
+/*light gray #ABABAB */
+/* purple #634271 */
 
 body {
   padding: 50px;
@@ -19,6 +22,7 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 75px;
+  color: #634271;
 }
 
 h2 {
@@ -26,6 +30,12 @@ h2 {
   font-weight: 100;
   font-size: 80px;
   margin-top: -20px;
+  color: #634271;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 input {
@@ -34,8 +44,14 @@ input {
 
 i {
   cursor: pointer;
+  color: #2D2D2D;
 }
 
 i:hover {
-  color: black;
+  color: #ABABAB;
+}
+
+p {
+  margin: 10px 300px 10.5px 300px;
+  font-family: 'Raleway', sans-serif;
 }
