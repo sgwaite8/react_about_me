@@ -2,8 +2,12 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var passport = require('passport');
+var strategy = require('./setup-passport');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -21,6 +25,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'G8toWeBOUztmbED9Rcz6uvts4pPAQZYoevPhwY5NmWdPuuMIZRGnBx5xf2M7AeAI', resave: false,  saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Mongoose Connection
 var mongoose = require('mongoose');
@@ -35,6 +42,24 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+// Auth0 callback handler
+app.get('/callback',
+  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
+  function(req, res) {
+    if (!req.user) {
+      throw new Error('user null');
+    }
+    res.redirect("/user");
+  });
+
+  // requiresLogin.js
+module.exports = function(req, res, next) {
+  if (!req.isAuthenticated()) {
+    return res.redirect('/');
+  }
+  next();
+}
 
 // error handlers
 
